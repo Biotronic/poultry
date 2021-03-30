@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biotronic.Poultry", "Biotronic.Poultry\Biotronic.Poultry.csproj", "{EB3DADD5-7DB3-48AD-8558-47CD84F4D4A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biotronic.Poultry.Utilities", "Biotronic.Poultry.Utilities\Biotronic.Poultry.Utilities.csproj", "{E6181B80-7AEA-4EF5-9F09-F34F8EDEFA8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biotronic.Poultry.Data", "Biotronic.Poultry.Data\Biotronic.Poultry.Data.csproj", "{17C572CB-BDC5-4E73-B186-0B5AFB21079F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biotronic.Poultry.Dto", "Biotronic.Poultry.Dto\Biotronic.Poultry.Dto.csproj", "{25DECEAC-04BA-4AEB-950D-6B6EEDB4F099}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biotronic.Poultry.Tests", "Biotronic.Poultry.Tests\Biotronic.Poultry.Tests.csproj", "{7A9C12A7-188D-4023-82A8-1DB81A739ACF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EB3DADD5-7DB3-48AD-8558-47CD84F4D4A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB3DADD5-7DB3-48AD-8558-47CD84F4D4A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB3DADD5-7DB3-48AD-8558-47CD84F4D4A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB3DADD5-7DB3-48AD-8558-47CD84F4D4A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6181B80-7AEA-4EF5-9F09-F34F8EDEFA8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6181B80-7AEA-4EF5-9F09-F34F8EDEFA8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6181B80-7AEA-4EF5-9F09-F34F8EDEFA8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6181B80-7AEA-4EF5-9F09-F34F8EDEFA8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17C572CB-BDC5-4E73-B186-0B5AFB21079F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17C572CB-BDC5-4E73-B186-0B5AFB21079F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17C572CB-BDC5-4E73-B186-0B5AFB21079F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17C572CB-BDC5-4E73-B186-0B5AFB21079F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25DECEAC-04BA-4AEB-950D-6B6EEDB4F099}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25DECEAC-04BA-4AEB-950D-6B6EEDB4F099}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25DECEAC-04BA-4AEB-950D-6B6EEDB4F099}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25DECEAC-04BA-4AEB-950D-6B6EEDB4F099}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A9C12A7-188D-4023-82A8-1DB81A739ACF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A9C12A7-188D-4023-82A8-1DB81A739ACF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A9C12A7-188D-4023-82A8-1DB81A739ACF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A9C12A7-188D-4023-82A8-1DB81A739ACF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5B17B2B1-8FAB-4C53-B4E6-E9A945515E11}
+	EndGlobalSection
+EndGlobal
