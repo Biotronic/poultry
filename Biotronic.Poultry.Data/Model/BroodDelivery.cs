@@ -1,27 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+using Biotronic.Poultry.Utilities.Database;
+using Biotronic.Poultry.Utilities.Database.Attributes;
 
 namespace Biotronic.Poultry.Data.Model
 {
-    public class BroodDelivery
+    public class BroodDelivery : BaseDbObject
     {
-        [Key]
-        public int Id { get; set; }
-
+        [Index]
         public Brood Brood { get; set; }
 
-        public DateTime FecesSampleSent { get; set; }
+        public DateTime? FecesSampleSent { get; set; }
 
-        public DateTime FooSent { get; set; }
+        public DateTime? SelfReportSent { get; set; }
 
-        public DateTime FinalFeedStarted { get; set; }
+        public DateTime? FinalFeedStarted { get; set; }
 
-        public DateTime FeedEmpty { get; set; }
+        public DateTime? FeedEmpty { get; set; }
 
-        public DateTime DeliveryDate { get; set; }
+        public DateTime? DeliveryDate { get; set; }
 
-        public int AnimalsDelivered { get; set; }
+        public int? AnimalsDelivered { get; set; }
 
         public double? WeightDeliveredKg { get; set; }
 

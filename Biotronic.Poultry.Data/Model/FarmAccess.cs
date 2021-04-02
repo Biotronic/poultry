@@ -1,14 +1,14 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Biotronic.Poultry.Utilities.Database;
+using Biotronic.Poultry.Utilities.Database.Attributes;
 
 namespace Biotronic.Poultry.Data.Model
 {
-    public class FarmAccess
+    public class FarmAccess : BaseDbObject
     {
-        [Key]
-        public int Id { get; set; }
-
+        [Index]
         public Farm Farm { get; set; }
 
+        [Index]
         public User User { get; set; }
         
         public AccessLevel Access { get; set; }

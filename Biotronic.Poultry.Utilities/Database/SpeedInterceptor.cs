@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.Common;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -76,6 +77,9 @@ namespace Biotronic.Poultry.Utilities.Database
 
         private static void FixCommand(DbCommand command)
         {
+            Trace.WriteLine("================================");
+            Trace.WriteLine(command.CommandText);
+
             command.CommandText = $"{string.Join("", command.Parameters.OfType<DbParameter>().Select(DeclareParameter))}{command.CommandText}";
 
             foreach (DbParameter param in command.Parameters)

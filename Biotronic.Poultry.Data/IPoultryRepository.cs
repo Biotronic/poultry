@@ -1,10 +1,9 @@
-﻿using System.Threading.Tasks;
-using Biotronic.Poultry.Dto;
+﻿using Biotronic.Poultry.Dto;
 
 namespace Biotronic.Poultry.Data
 {
     public interface IPoultryRepository
     {
-        Task UpdateBrood(BroodUpdate brood);
+        void UpdateBrood(BroodUpdate brood);
     }
 }

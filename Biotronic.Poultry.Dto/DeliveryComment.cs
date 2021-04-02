@@ -1,8 +1,8 @@
-﻿using Biotronic.Poultry.Utilities.Database;
+﻿using Biotronic.Poultry.Utilities;
 
-namespace Biotronic.Poultry.Data.Model
+namespace Biotronic.Poultry.Dto
 {
-    public class DeliveryComment : BaseDbObject
+    public class DeliveryComment : BaseDtoObject
     {
         public BroodDelivery Delivery { get; set; }
 

@@ -21,6 +21,7 @@ namespace Biotronic.Poultry.Data
         public DbSet<Hatchery> Hatcheries { get; set; }
         public DbSet<House> Houses { get; set; }
         public DbSet<Farm> Farms { get; set; }
+        public DbSet<Silo> Silos { get; set; }
         public DbSet<Hybrid> Hybrids { get; set; }
         public DbSet<FarmAccess> FarmAccess { get; set; }
 

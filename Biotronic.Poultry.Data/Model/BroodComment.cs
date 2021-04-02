@@ -1,13 +1,12 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Biotronic.Poultry.Utilities.Database;
+using Biotronic.Poultry.Utilities.Database.Attributes;
 
 namespace Biotronic.Poultry.Data.Model
 {
-    public class BroodComment
+    public class BroodComment : BaseDbObject
     {
-        [Key]
-        public int Id { get; set; }
-
-        //public Brood Brood { get; set; }
+        [Index]
+        public Brood Brood { get; set; }
         
         public string Comment { get; set; }
 

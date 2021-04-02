@@ -8,10 +8,12 @@ using Biotronic.Poultry.Utilities.Database.Attributes;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging.TraceSource;
 
 namespace Biotronic.Poultry.Utilities.Database
 {
-    public abstract class BaseDbContext<TContext> : DbContext where TContext : BaseDbContext<TContext>
+    public abstract class BaseDbContext<TContext> : DbContext, IBaseDbContext where TContext : BaseDbContext<TContext>
     {
         protected BaseDbContext() { }
 
@@ -28,10 +30,14 @@ namespace Biotronic.Poultry.Utilities.Database
 
         protected string ConnectionString { get; set; }
 
+        protected ILoggerFactory Logger { get; set; } = new LoggerFactory(new[] { new TraceSourceLoggerProvider(new SourceSwitch("Trace")) });
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
             optionsBuilder.UseSqlServer(ConnectionString);
+
+            optionsBuilder.UseLoggerFactory(Logger);
 
             // Magically make queries faster!
             optionsBuilder.AddInterceptors(new SpeedInterceptor());

@@ -1,21 +1,20 @@
-﻿using System.Threading.Tasks;
-using Biotronic.Poultry.Dto;
+﻿using System.Collections.Generic;
+using Biotronic.Poultry.Data.Model;
 using Biotronic.Poultry.Utilities.Database;
 
 namespace Biotronic.Poultry.Data
 {
-    public class PoultryRepository : BaseDbRepository<PoultryDbContext>, IPoultryRepository
+    public class PoultryRepository : BaseDbRepository<PoultryDbContext, PoultryProfile>, IPoultryRepository
     {
         public PoultryRepository(PoultryDbContext context, UserHandler userHandler) : base(context, userHandler)
         {
         }
 
-        public async Task UpdateBrood(BroodUpdate brood)
+        public void UpdateBrood(Dto.BroodUpdate brood)
         {
-            await using var batch = Context.StartBatch();
+            using var batch = Context.StartBatch();
 
-
-            throw new System.NotImplementedException();
+            UpdateEntities<IEnumerable<Brood>>(brood.Broods);
         }
     }
 }

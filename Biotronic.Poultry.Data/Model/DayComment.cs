@@ -1,13 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Biotronic.Poultry.Utilities.Database;
 using Biotronic.Poultry.Utilities.Database.Attributes;
 
 namespace Biotronic.Poultry.Data.Model
 {
-    public class DayComment
+    public class DayComment : BaseDbObject
     {
-        [Key]
-        public int Id { get; set; }
-
         [Index]
         public DayRecord Day { get; set; }
 
