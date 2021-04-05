@@ -15,12 +15,12 @@ namespace Biotronic.Poultry.Data.Model
 
         public int? DeadFemales { get; set; }
 
-        public double WeightMalesKg { get; set; }
-        public double WeightFemalesKg { get; set; }
-        public double FeedUsageKg { get; set; }
-        public double WaterUsageLiters { get; set; }
-        public double Temperature { get; set; }
-        public double HumidityPct { get; set; }
+        public double? WeightMalesKg { get; set; }
+        public double? WeightFemalesKg { get; set; }
+        public double? FeedUsageKg { get; set; }
+        public double? WaterUsageLiters { get; set; }
+        public double? Temperature { get; set; }
+        public double? HumidityPct { get; set; }
 
         public IEnumerable<DayComment> Comments { get; set; }
     }

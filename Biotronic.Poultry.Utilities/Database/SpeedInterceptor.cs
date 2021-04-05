@@ -77,10 +77,13 @@ namespace Biotronic.Poultry.Utilities.Database
 
         private static void FixCommand(DbCommand command)
         {
-            Trace.WriteLine("================================");
+            Trace.WriteLine("==== This query ====");
             Trace.WriteLine(command.CommandText);
 
             command.CommandText = $"{string.Join("", command.Parameters.OfType<DbParameter>().Select(DeclareParameter))}{command.CommandText}";
+
+            Trace.WriteLine("==== Becomes ====");
+            Trace.WriteLine(command.CommandText);
 
             foreach (DbParameter param in command.Parameters)
             {
@@ -99,7 +102,7 @@ namespace Biotronic.Poultry.Utilities.Database
             // https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql-server-data-type-mappings
             return dbType switch
             {
-                DbType.AnsiString => $"varchar({size})",
+                DbType.AnsiString => size == 0 ? "varchar" : $"varchar({size})",
                 DbType.AnsiStringFixedLength => "char",
                 DbType.Binary => "binary",
                 DbType.Boolean => "bit",
@@ -116,8 +119,8 @@ namespace Biotronic.Poultry.Utilities.Database
                 DbType.Int64 => "bigint",
                 DbType.Object => "sql_variant",
                 DbType.Single => "real",
-                DbType.String => $"nvarchar({size})",
-                DbType.StringFixedLength => $"nchar({size})",
+                DbType.String => size == 0 ? "nvarchar" : $"nvarchar({size})",
+                DbType.StringFixedLength => size == 0 ? "nchar" : $"nchar({size})",
                 DbType.Time => "time",
                 DbType.Xml => "xml",
                 DbType.Currency => "currency",
