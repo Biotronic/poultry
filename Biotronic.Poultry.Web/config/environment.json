@@ -1,0 +1,12 @@
+{
+    "debug": true,
+    "testing": true,
+    "endpoints": {
+        "poultry": "https://localhost:19122"
+    },
+    "logins": {
+        "google": {
+            "clientid": "547141018781-aa91imv7omlkrcm6eg637n3kja280c0b.apps.googleusercontent.com"
+        }
+    }
+}
