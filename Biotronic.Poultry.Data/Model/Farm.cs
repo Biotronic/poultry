@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using Biotronic.Poultry.Utilities.Database;
 
 namespace Biotronic.Poultry.Data.Model
@@ -13,5 +14,11 @@ namespace Biotronic.Poultry.Data.Model
 
         [MaxLength(16)]
         public string ZipCode { get; set; }
+
+        public IEnumerable<House> Houses { get; set; }
+
+        public IEnumerable<Silo> Silos { get; set; }
+
+        public IEnumerable<FarmAccess> FarmAccess { get; set; }
     }
 }

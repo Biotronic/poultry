@@ -1,0 +1,6 @@
+<template>
+    <div repeat.for="house of houses">
+        ${house.name}
+        <brood-list broods.bind="house.broods"></brood-list>
+    </div>
+</template>

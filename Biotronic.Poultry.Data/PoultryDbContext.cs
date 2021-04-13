@@ -17,7 +17,6 @@ namespace Biotronic.Poultry.Data
         public DbSet<BroodDelivery> BroodDeliveries { get; set; }
         public DbSet<DeliveryComment> DeliveryComments { get; set; }
         public DbSet<BroodFeed> BroodFeeds { get; set; }
-        public DbSet<Veterinarian> Veterinarians { get; set; }
         public DbSet<Hatchery> Hatcheries { get; set; }
         public DbSet<House> Houses { get; set; }
         public DbSet<Farm> Farms { get; set; }

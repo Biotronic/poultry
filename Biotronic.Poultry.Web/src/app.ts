@@ -2,6 +2,7 @@ import { PoultryService } from './services/poultryservice';
 import { Router, RouterConfiguration } from 'aurelia-router';
 import { PLATFORM } from 'aurelia-pal';
 import { autoinject } from 'aurelia-property-injection';
+import { I18N } from 'aurelia-i18n';
 
 @autoinject
 export class App {
@@ -9,6 +10,10 @@ export class App {
     private router: Router;
     @autoinject
     private poultryService: PoultryService;
+
+    constructor(private i18n: I18N){
+        this.i18n.setLocale('no');
+    }
 
     public configureRouter(config: RouterConfiguration) {
         config.title = 'Foobar!'

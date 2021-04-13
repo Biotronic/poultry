@@ -16,5 +16,9 @@ namespace Biotronic.Poultry.Data
 
             UpdateEntities<IEnumerable<Brood>>(brood.Broods);
         }
+
+        public void CreateUser(string name, string email, string token)
+        {
+        }
     }
 }

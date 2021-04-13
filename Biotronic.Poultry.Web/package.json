@@ -13,10 +13,13 @@
         "aurelia-animator-css": "^1.0.4",
         "aurelia-api": "^3.2.1",
         "aurelia-bootstrapper": "^2.3.3",
+        "aurelia-i18n": "^3.1.4",
         "aurelia-property-injection": "^0.5.0",
         "aurelia-router": "^1.7.1",
         "date-fns": "^2.19.0",
-        "gapi-script": "^1.1.0"
+        "gapi-script": "^1.1.0",
+        "i18next-resource-store-loader": "^0.1.2",
+        "i18next-xhr-backend": "^3.2.2"
     },
     "devDependencies": {
         "@types/jest": "^26.0.21",

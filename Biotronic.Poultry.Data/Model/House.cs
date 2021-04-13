@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using Biotronic.Poultry.Utilities.Database;
 using Biotronic.Poultry.Utilities.Database.Attributes;
 
@@ -17,5 +18,7 @@ namespace Biotronic.Poultry.Data.Model
 
         [Index]
         public User Owner { get; set; }
+
+        public IEnumerable<Brood> Broods { get; set; }
     }
 }

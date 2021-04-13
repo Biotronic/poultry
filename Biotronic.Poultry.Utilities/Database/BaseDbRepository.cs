@@ -3,7 +3,7 @@ using AutoMapper;
 
 namespace Biotronic.Poultry.Utilities.Database
 {
-    public abstract class BaseDbRepository<TContext, TProfile> where TContext : BaseDbContext<TContext> where TProfile : BaseDbProfile<TContext>
+    public abstract class BaseDbRepository<TContext, TProfile> : IBaseDbRepository where TContext : BaseDbContext<TContext> where TProfile : BaseDbProfile<TContext>
     {
         protected TContext Context { get; }
 

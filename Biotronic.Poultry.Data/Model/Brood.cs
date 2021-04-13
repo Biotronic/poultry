@@ -22,7 +22,7 @@ namespace Biotronic.Poultry.Data.Model
         public DateTime? Ended { get; set; }
 
         [Index]
-        public Veterinarian Veterinarian { get; set; }
+        public User Veterinarian { get; set; }
 
         public Hatchery Hatchery { get; set; }
 
